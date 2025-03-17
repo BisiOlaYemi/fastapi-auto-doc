@@ -1,0 +1,22 @@
+<html><head><title>File Documentation</title></head><body><h1>Documentation for app\services\doc_generator.py</h1><h2>Classes</h2><h3>DocGenerator</h3><pre>Main documentation generator service.
+Coordinates parsing files and generating documentation.</pre><h4>Methods</h4><ul><li><strong>__init__</strong><pre>Initialize the documentation generator.
+
+Args:
+    config: Project configuration</pre></li><li><strong>save_documentation</strong><pre>Save the documentation data to a JSON file.
+
+Args:
+    output_path: Directory where the JSON file should be saved.</pre></li><li><strong>document_project</strong><pre>Generate documentation for the entire project.</pre></li><li><strong>start_watching</strong><pre>Start watching the project directory for changes.</pre></li><li><strong>stop_watching</strong><pre>Stop watching the project directory.</pre></li><li><strong>generate_output</strong><pre>Generate documentation output files.
+
+Args:
+    results: Optional list of DocumentationResult objects. If not provided,
+            will use stored documentation.</pre></li><li><strong>create_watcher</strong><pre>Create and return a watcher for the project.
+This method is for compatibility with the API.
+
+Returns:
+    self: Returns the DocGenerator instance itself</pre></li><li><strong>document_file</strong><pre>Generate documentation for a single file.
+
+Args:
+    file_path: Path to the file to document
+    
+Returns:
+    DocumentationResult object if successful, None otherwise</pre></li></ul></body></html>

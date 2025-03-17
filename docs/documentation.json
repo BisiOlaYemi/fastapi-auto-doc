@@ -1,0 +1,1403 @@
+{
+    "project_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc",
+    "structure": {
+        "name": "fastapi-autodoc",
+        "type": "directory",
+        "children": [
+            {
+                "name": ".qodo",
+                "type": "directory",
+                "children": []
+            },
+            {
+                "name": "app",
+                "type": "directory",
+                "children": [
+                    {
+                        "name": "__init__.py",
+                        "type": "file",
+                        "children": null
+                    },
+                    {
+                        "name": "api",
+                        "type": "directory",
+                        "children": [
+                            {
+                                "name": "__init__.py",
+                                "type": "file",
+                                "children": null
+                            },
+                            {
+                                "name": "endpoints",
+                                "type": "directory",
+                                "children": [
+                                    {
+                                        "name": "__init__.py",
+                                        "type": "file",
+                                        "children": null
+                                    },
+                                    {
+                                        "name": "documentation.py",
+                                        "type": "file",
+                                        "children": null
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "router.py",
+                                "type": "file",
+                                "children": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "core",
+                        "type": "directory",
+                        "children": [
+                            {
+                                "name": "__init__.py",
+                                "type": "file",
+                                "children": null
+                            },
+                            {
+                                "name": "config.py",
+                                "type": "file",
+                                "children": null
+                            },
+                            {
+                                "name": "schemas.py",
+                                "type": "file",
+                                "children": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "main.py",
+                        "type": "file",
+                        "children": null
+                    },
+                    {
+                        "name": "services",
+                        "type": "directory",
+                        "children": [
+                            {
+                                "name": "__init__.py",
+                                "type": "file",
+                                "children": null
+                            },
+                            {
+                                "name": "directory_scanner.py",
+                                "type": "file",
+                                "children": null
+                            },
+                            {
+                                "name": "doc_generator.py",
+                                "type": "file",
+                                "children": null
+                            },
+                            {
+                                "name": "file_parser.py",
+                                "type": "file",
+                                "children": null
+                            },
+                            {
+                                "name": "watcher.py",
+                                "type": "file",
+                                "children": null
+                            }
+                        ]
+                    },
+                    {
+                        "name": "static",
+                        "type": "directory",
+                        "children": [
+                            {
+                                "name": "css",
+                                "type": "directory",
+                                "children": []
+                            },
+                            {
+                                "name": "js",
+                                "type": "directory",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "docs",
+                "type": "directory",
+                "children": [
+                    {
+                        "name": "html",
+                        "type": "directory",
+                        "children": [
+                            {
+                                "name": "app",
+                                "type": "directory",
+                                "children": [
+                                    {
+                                        "name": "api",
+                                        "type": "directory",
+                                        "children": [
+                                            {
+                                                "name": "endpoints",
+                                                "type": "directory",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "name": "core",
+                                        "type": "directory",
+                                        "children": []
+                                    },
+                                    {
+                                        "name": "services",
+                                        "type": "directory",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "json",
+                        "type": "directory",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "setup.py",
+                "type": "file",
+                "children": null
+            },
+            {
+                "name": "templates",
+                "type": "directory",
+                "children": []
+            },
+            {
+                "name": "test",
+                "type": "directory",
+                "children": []
+            },
+            {
+                "name": "test_api.py",
+                "type": "file",
+                "children": null
+            }
+        ]
+    },
+    "files": {
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\setup.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\setup.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {},
+            "imports": [],
+            "last_modified": "2025-03-12 16:42:56.971662"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\test_api.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\test_api.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {},
+            "imports": [
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.schemas",
+                    "names": [
+                        "ProjectConfig"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.services.doc_generator",
+                    "names": [
+                        "DocGenerator"
+                    ],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-15 00:21:33.566588"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\main.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\main.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {
+                "error_handling_middleware": {
+                    "name": "error_handling_middleware",
+                    "docstring": null,
+                    "params": [
+                        "request",
+                        "call_next"
+                    ],
+                    "return_type": null,
+                    "decorators": [
+                        "app.middleware"
+                    ],
+                    "line_number": 41,
+                    "source_code": null,
+                    "is_async": true
+                },
+                "root": {
+                    "name": "root",
+                    "docstring": "Redirect to documentation dashboard.",
+                    "params": [],
+                    "return_type": null,
+                    "decorators": [
+                        "app.get"
+                    ],
+                    "line_number": 55,
+                    "source_code": null,
+                    "is_async": true
+                }
+            },
+            "imports": [
+                {
+                    "module": "fastapi",
+                    "names": [
+                        "FastAPI",
+                        "Request"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "fastapi.middleware.cors",
+                    "names": [
+                        "CORSMiddleware"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "fastapi.staticfiles",
+                    "names": [
+                        "StaticFiles"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "fastapi.responses",
+                    "names": [
+                        "JSONResponse"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "traceback",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "logging",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "app.api.router",
+                    "names": [
+                        "api_router"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.config",
+                    "names": [
+                        "settings"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "uvicorn",
+                    "names": [],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-14 14:24:06.924277"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\__init__.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\__init__.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {},
+            "imports": [],
+            "last_modified": "2025-03-12 16:26:56.239965"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\api\\router.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\api\\router.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {},
+            "imports": [
+                {
+                    "module": "fastapi",
+                    "names": [
+                        "APIRouter"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.api.endpoints",
+                    "names": [
+                        "documentation"
+                    ],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-13 01:51:13.960033"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\api\\__init__.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\api\\__init__.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {},
+            "imports": [],
+            "last_modified": "2025-03-12 16:36:17.222311"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\api\\endpoints\\documentation.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\api\\endpoints\\documentation.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {
+                "document_project": {
+                    "name": "document_project",
+                    "docstring": "Document a project and generate documentation files.\n\nOptionally start watching the project for file changes.",
+                    "params": [
+                        "config",
+                        "background_tasks"
+                    ],
+                    "return_type": null,
+                    "decorators": [
+                        "router.post"
+                    ],
+                    "line_number": 23,
+                    "source_code": null,
+                    "is_async": true
+                },
+                "list_documented_projects": {
+                    "name": "list_documented_projects",
+                    "docstring": "List all projects that have been documented.",
+                    "params": [],
+                    "return_type": null,
+                    "decorators": [
+                        "router.get"
+                    ],
+                    "line_number": 60,
+                    "source_code": null,
+                    "is_async": true
+                },
+                "get_project_documentation": {
+                    "name": "get_project_documentation",
+                    "docstring": "Get the documentation for a specific project.",
+                    "params": [
+                        "project_path"
+                    ],
+                    "return_type": null,
+                    "decorators": [
+                        "router.get"
+                    ],
+                    "line_number": 84,
+                    "source_code": null,
+                    "is_async": true
+                },
+                "stop_watching_project": {
+                    "name": "stop_watching_project",
+                    "docstring": "Stop watching a project for changes.",
+                    "params": [
+                        "project_path"
+                    ],
+                    "return_type": null,
+                    "decorators": [
+                        "router.delete"
+                    ],
+                    "line_number": 94,
+                    "source_code": null,
+                    "is_async": true
+                },
+                "view_documentation": {
+                    "name": "view_documentation",
+                    "docstring": "View the HTML documentation for a project.",
+                    "params": [
+                        "project_path"
+                    ],
+                    "return_type": null,
+                    "decorators": [
+                        "router.get"
+                    ],
+                    "line_number": 109,
+                    "source_code": null,
+                    "is_async": true
+                },
+                "refresh_documentation": {
+                    "name": "refresh_documentation",
+                    "docstring": "Manually refresh the documentation for a project.",
+                    "params": [
+                        "project_path"
+                    ],
+                    "return_type": null,
+                    "decorators": [
+                        "router.post"
+                    ],
+                    "line_number": 131,
+                    "source_code": null,
+                    "is_async": true
+                },
+                "documentation_dashboard": {
+                    "name": "documentation_dashboard",
+                    "docstring": "Return the HTML dashboard for managing documentation.",
+                    "params": [],
+                    "return_type": null,
+                    "decorators": [
+                        "router.get"
+                    ],
+                    "line_number": 157,
+                    "source_code": null,
+                    "is_async": true
+                },
+                "get_service_status": {
+                    "name": "get_service_status",
+                    "docstring": "Get the status of the documentation service.",
+                    "params": [],
+                    "return_type": null,
+                    "decorators": [
+                        "router.get"
+                    ],
+                    "line_number": 167,
+                    "source_code": null,
+                    "is_async": true
+                }
+            },
+            "imports": [
+                {
+                    "module": "fastapi",
+                    "names": [
+                        "APIRouter",
+                        "HTTPException",
+                        "BackgroundTasks",
+                        "Depends"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "fastapi.responses",
+                    "names": [
+                        "HTMLResponse",
+                        "FileResponse"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "typing",
+                    "names": [
+                        "Dict",
+                        "Any",
+                        "Optional"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "time",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.schemas",
+                    "names": [
+                        "ProjectConfig",
+                        "DocumentationResult",
+                        "ProjectDocumentation"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.services.doc_generator",
+                    "names": [
+                        "DocGenerator"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.config",
+                    "names": [
+                        "settings"
+                    ],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-14 15:10:46.780403"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\api\\endpoints\\__init__.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\api\\endpoints\\__init__.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {},
+            "imports": [],
+            "last_modified": "2025-03-12 16:38:32.157232"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\core\\config.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\core\\config.py",
+            "module_docstring": null,
+            "classes": {
+                "Settings": {
+                    "name": "Settings",
+                    "docstring": "Application settings with defaults.",
+                    "methods": {},
+                    "base_classes": [
+                        "BaseSettings"
+                    ],
+                    "decorators": [],
+                    "line_number": 7,
+                    "source_code": null,
+                    "class_variables": {}
+                }
+            },
+            "functions": {},
+            "imports": [
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "typing",
+                    "names": [
+                        "List",
+                        "Optional"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "pydantic_settings",
+                    "names": [
+                        "BaseSettings"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "pydantic",
+                    "names": [
+                        "Field"
+                    ],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-13 01:27:14.255061"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\core\\schemas.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\core\\schemas.py",
+            "module_docstring": null,
+            "classes": {
+                "ProjectConfig": {
+                    "name": "ProjectConfig",
+                    "docstring": "Configuration for a project to be documented.",
+                    "methods": {
+                        "validate_project_path": {
+                            "name": "validate_project_path",
+                            "docstring": "Validate that the project path exists and is a directory.",
+                            "params": [
+                                "cls",
+                                "v"
+                            ],
+                            "return_type": null,
+                            "decorators": [
+                                "validator"
+                            ],
+                            "line_number": 17,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "validate_output_path": {
+                            "name": "validate_output_path",
+                            "docstring": "Ensure output path is valid.",
+                            "params": [
+                                "cls",
+                                "v",
+                                "values"
+                            ],
+                            "return_type": null,
+                            "decorators": [
+                                "validator"
+                            ],
+                            "line_number": 26,
+                            "source_code": null,
+                            "is_async": false
+                        }
+                    },
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 6,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "FunctionInfo": {
+                    "name": "FunctionInfo",
+                    "docstring": "Information about a function in a Python module.",
+                    "methods": {},
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 36,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "MethodInfo": {
+                    "name": "MethodInfo",
+                    "docstring": "Information about a method in a class.",
+                    "methods": {},
+                    "base_classes": [
+                        "FunctionInfo"
+                    ],
+                    "decorators": [],
+                    "line_number": 48,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "ClassInfo": {
+                    "name": "ClassInfo",
+                    "docstring": "Information about a class in a Python module.",
+                    "methods": {},
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 52,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "ImportInfo": {
+                    "name": "ImportInfo",
+                    "docstring": "Information about imports in a Python module.",
+                    "methods": {},
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 64,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "FileDocumentation": {
+                    "name": "FileDocumentation",
+                    "docstring": "Documentation for a single Python file.",
+                    "methods": {
+                        "validate_file_path": {
+                            "name": "validate_file_path",
+                            "docstring": "Validate that the file path exists.",
+                            "params": [
+                                "cls",
+                                "v"
+                            ],
+                            "return_type": null,
+                            "decorators": [
+                                "validator"
+                            ],
+                            "line_number": 82,
+                            "source_code": null,
+                            "is_async": false
+                        }
+                    },
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 71,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "DirectoryStructure": {
+                    "name": "DirectoryStructure",
+                    "docstring": "Recursive model representing a directory structure.",
+                    "methods": {},
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 88,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "ProjectDocumentation": {
+                    "name": "ProjectDocumentation",
+                    "docstring": "Complete documentation for a project.",
+                    "methods": {
+                        "validate_project_path": {
+                            "name": "validate_project_path",
+                            "docstring": "Validate that the project path exists and is a directory.",
+                            "params": [
+                                "cls",
+                                "v"
+                            ],
+                            "return_type": null,
+                            "decorators": [
+                                "validator"
+                            ],
+                            "line_number": 108,
+                            "source_code": null,
+                            "is_async": false
+                        }
+                    },
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 98,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "DocumentationResult": {
+                    "name": "DocumentationResult",
+                    "docstring": "Result of a documentation generation process.",
+                    "methods": {},
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 116,
+                    "source_code": null,
+                    "class_variables": {}
+                },
+                "ErrorResponse": {
+                    "name": "ErrorResponse",
+                    "docstring": "Standard error response.",
+                    "methods": {},
+                    "base_classes": [
+                        "BaseModel"
+                    ],
+                    "decorators": [],
+                    "line_number": 138,
+                    "source_code": null,
+                    "class_variables": {}
+                }
+            },
+            "functions": {},
+            "imports": [
+                {
+                    "module": "pydantic",
+                    "names": [
+                        "BaseModel",
+                        "validator",
+                        "Field"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "typing",
+                    "names": [
+                        "Dict",
+                        "List",
+                        "Optional",
+                        "Any",
+                        "Set"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "datetime",
+                    "names": [
+                        "datetime"
+                    ],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-14 02:20:38.795480"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\core\\__init__.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\core\\__init__.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {},
+            "imports": [],
+            "last_modified": "2025-03-12 16:30:18.960841"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\directory_scanner.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\directory_scanner.py",
+            "module_docstring": null,
+            "classes": {
+                "DirectoryScanner": {
+                    "name": "DirectoryScanner",
+                    "docstring": "Scanner for project directories that builds structure and tracks files.",
+                    "methods": {
+                        "__init__": {
+                            "name": "__init__",
+                            "docstring": "Initialize the directory scanner.\n\nArgs:\n    project_path: Path to the project directory\n    excluded_dirs: List of directory names to exclude\n    excluded_files: List of file patterns to exclude",
+                            "params": [
+                                "self",
+                                "project_path",
+                                "excluded_dirs",
+                                "excluded_files"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 16,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "is_python_file": {
+                            "name": "is_python_file",
+                            "docstring": "Check if a file is a Python file.",
+                            "params": [
+                                "self",
+                                "filename"
+                            ],
+                            "return_type": "bool",
+                            "decorators": [],
+                            "line_number": 34,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "should_exclude": {
+                            "name": "should_exclude",
+                            "docstring": "Check if a path should be excluded from documentation.",
+                            "params": [
+                                "self",
+                                "path"
+                            ],
+                            "return_type": "bool",
+                            "decorators": [],
+                            "line_number": 38,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "get_all_python_files": {
+                            "name": "get_all_python_files",
+                            "docstring": "Get all Python files in the project directory.",
+                            "params": [
+                                "self"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 58,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "get_project_structure": {
+                            "name": "get_project_structure",
+                            "docstring": "Generate a recursive structure representing the project directory.\n\nReturns:\n    DirectoryStructure object with the project hierarchy",
+                            "params": [
+                                "self"
+                            ],
+                            "return_type": "DirectoryStructure",
+                            "decorators": [],
+                            "line_number": 97,
+                            "source_code": null,
+                            "is_async": false
+                        }
+                    },
+                    "base_classes": [],
+                    "decorators": [],
+                    "line_number": 13,
+                    "source_code": null,
+                    "class_variables": {}
+                }
+            },
+            "functions": {},
+            "imports": [
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "time",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "fnmatch",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "typing",
+                    "names": [
+                        "Dict",
+                        "List",
+                        "Optional",
+                        "Set",
+                        "Callable"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "datetime",
+                    "names": [
+                        "datetime"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "logging",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.schemas",
+                    "names": [
+                        "DirectoryStructure"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.config",
+                    "names": [
+                        "settings"
+                    ],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-14 14:22:41.662646"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\doc_generator.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\doc_generator.py",
+            "module_docstring": null,
+            "classes": {
+                "DocGenerator": {
+                    "name": "DocGenerator",
+                    "docstring": "Main documentation generator service.\nCoordinates parsing files and generating documentation.",
+                    "methods": {
+                        "__init__": {
+                            "name": "__init__",
+                            "docstring": "Initialize the documentation generator.\n\nArgs:\n    config: Project configuration",
+                            "params": [
+                                "self",
+                                "config"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 28,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "save_documentation": {
+                            "name": "save_documentation",
+                            "docstring": "Save the documentation data to a JSON file.\n\nArgs:\n    output_path: Directory where the JSON file should be saved.",
+                            "params": [
+                                "self",
+                                "output_path"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 46,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "document_project": {
+                            "name": "document_project",
+                            "docstring": "Generate documentation for the entire project.",
+                            "params": [
+                                "self"
+                            ],
+                            "return_type": "DocumentationResult",
+                            "decorators": [],
+                            "line_number": 77,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "start_watching": {
+                            "name": "start_watching",
+                            "docstring": "Start watching the project directory for changes.",
+                            "params": [
+                                "self"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 126,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "stop_watching": {
+                            "name": "stop_watching",
+                            "docstring": "Stop watching the project directory.",
+                            "params": [
+                                "self"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 142,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "generate_output": {
+                            "name": "generate_output",
+                            "docstring": "Generate documentation output files.\n\nArgs:\n    results: Optional list of DocumentationResult objects. If not provided,\n            will use stored documentation.",
+                            "params": [
+                                "self",
+                                "results"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 173,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "create_watcher": {
+                            "name": "create_watcher",
+                            "docstring": "Create and return a watcher for the project.\nThis method is for compatibility with the API.\n\nReturns:\n    self: Returns the DocGenerator instance itself",
+                            "params": [
+                                "self"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 1262,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "document_file": {
+                            "name": "document_file",
+                            "docstring": "Generate documentation for a single file.\n\nArgs:\n    file_path: Path to the file to document\n    \nReturns:\n    DocumentationResult object if successful, None otherwise",
+                            "params": [
+                                "self",
+                                "file_path"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 1272,
+                            "source_code": null,
+                            "is_async": false
+                        }
+                    },
+                    "base_classes": [],
+                    "decorators": [],
+                    "line_number": 22,
+                    "source_code": null,
+                    "class_variables": {}
+                }
+            },
+            "functions": {},
+            "imports": [
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "time",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "typing",
+                    "names": [
+                        "Dict",
+                        "List",
+                        "Optional",
+                        "Callable",
+                        "Any"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "datetime",
+                    "names": [
+                        "datetime"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "logging",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "threading",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "json",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.schemas",
+                    "names": [
+                        "ProjectConfig",
+                        "ProjectDocumentation",
+                        "FileDocumentation",
+                        "DocumentationResult"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.services.file_parser",
+                    "names": [
+                        "FileParser"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.services.directory_scanner",
+                    "names": [
+                        "DirectoryScanner"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.services.watcher",
+                    "names": [
+                        "FileSystemWatcher"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.config",
+                    "names": [
+                        "settings"
+                    ],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-16 22:08:22.091724"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\file_parser.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\file_parser.py",
+            "module_docstring": null,
+            "classes": {
+                "FileParser": {
+                    "name": "FileParser",
+                    "docstring": "Parser for Python files to extract documentation.",
+                    "methods": {
+                        "__init__": {
+                            "name": "__init__",
+                            "docstring": "Initialize the file parser.\n\nArgs:\n    include_private: Whether to include private members (starting with _)\n    include_source_code: Whether to include source code in the documentation",
+                            "params": [
+                                "self",
+                                "include_private",
+                                "include_source_code"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 16,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "parse_file": {
+                            "name": "parse_file",
+                            "docstring": "Parse a Python file and extract documentation.\n\nArgs:\n    file_path: Path to the Python file to parse\n    \nReturns:\n    FileDocumentation object containing the parsed information",
+                            "params": [
+                                "self",
+                                "file_path"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 27,
+                            "source_code": null,
+                            "is_async": false
+                        }
+                    },
+                    "base_classes": [],
+                    "decorators": [],
+                    "line_number": 13,
+                    "source_code": null,
+                    "class_variables": {}
+                }
+            },
+            "functions": {},
+            "imports": [
+                {
+                    "module": "ast",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "inspect",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "importlib.util",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "typing",
+                    "names": [
+                        "Dict",
+                        "List",
+                        "Optional",
+                        "Any",
+                        "Set",
+                        "Tuple"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "logging",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "datetime",
+                    "names": [
+                        "datetime"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "app.core.schemas",
+                    "names": [
+                        "FileDocumentation",
+                        "FunctionInfo",
+                        "ClassInfo",
+                        "MethodInfo",
+                        "ImportInfo"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "traceback",
+                    "names": [],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-14 14:23:23.433901"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\watcher.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\watcher.py",
+            "module_docstring": null,
+            "classes": {
+                "FileSystemWatcher": {
+                    "name": "FileSystemWatcher",
+                    "docstring": "Watches a directory for changes to Python files.",
+                    "methods": {
+                        "__init__": {
+                            "name": "__init__",
+                            "docstring": "Initialize the file system watcher.\n\nArgs:\n    directory: Directory to watch\n    callback: Function to call when a file changes\n    interval: Polling interval in seconds\n    file_filter: Optional function to filter files to watch",
+                            "params": [
+                                "self",
+                                "directory",
+                                "callback",
+                                "interval",
+                                "file_filter"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 12,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "start": {
+                            "name": "start",
+                            "docstring": "Start watching for file changes in a background thread.",
+                            "params": [
+                                "self"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 105,
+                            "source_code": null,
+                            "is_async": false
+                        },
+                        "stop": {
+                            "name": "stop",
+                            "docstring": "Stop watching for file changes.",
+                            "params": [
+                                "self"
+                            ],
+                            "return_type": null,
+                            "decorators": [],
+                            "line_number": 122,
+                            "source_code": null,
+                            "is_async": false
+                        }
+                    },
+                    "base_classes": [],
+                    "decorators": [],
+                    "line_number": 9,
+                    "source_code": null,
+                    "class_variables": {}
+                }
+            },
+            "functions": {},
+            "imports": [
+                {
+                    "module": "os",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "time",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "threading",
+                    "names": [],
+                    "alias": null
+                },
+                {
+                    "module": "typing",
+                    "names": [
+                        "Dict",
+                        "List",
+                        "Set",
+                        "Callable",
+                        "Optional"
+                    ],
+                    "alias": null
+                },
+                {
+                    "module": "logging",
+                    "names": [],
+                    "alias": null
+                }
+            ],
+            "last_modified": "2025-03-13 01:40:27.581223"
+        },
+        "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\__init__.py": {
+            "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\__init__.py",
+            "module_docstring": null,
+            "classes": {},
+            "functions": {},
+            "imports": [],
+            "last_modified": "2025-03-12 16:40:08.541848"
+        }
+    },
+    "last_updated": "2025-03-16T22:08:36.221908",
+    "config": {
+        "project_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc",
+        "watch_mode": false,
+        "include_private": false,
+        "excluded_dirs": [
+            "__pycache__",
+            ".git",
+            ".venv",
+            "venv",
+            "env",
+            "node_modules"
+        ],
+        "excluded_files": [],
+        "doc_output_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\docs"
+    }
+}

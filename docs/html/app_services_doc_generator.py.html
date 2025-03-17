@@ -1,0 +1,206 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>File Documentation - app\services\doc_generator.py</title>
+                <link rel="stylesheet" href="../../style.css">
+                <style>
+                    body {
+                        background-color: #0d9488;
+                        color: #333;
+                    }
+                    .container {
+                        background-color: #f0fdfa;
+                        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                        border-radius: 8px;
+                        max-width: 1200px;
+                        margin: 20px auto;
+                        padding: 30px;
+                    }
+                    .method-item, .param-item {
+                        margin-bottom: 15px;
+                        padding: 15px;
+                        background-color: #f8f9fa;
+                        border-radius: 6px;
+                        border-left: 3px solid #3498db;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+                    }
+                    .method-name {
+                        color: #2c3e50;
+                        font-weight: 600;
+                        font-size: 16px;
+                        margin-bottom: 8px;
+                    }
+                    .method-signature {
+                        font-family: 'Courier New', monospace;
+                        background-color: #f1f1f1;
+                        padding: 6px 10px;
+                        border-radius: 4px;
+                        margin: 8px 0;
+                        display: inline-block;
+                    }
+                    .method-description {
+                        margin-top: 10px;
+                        line-height: 1.5;
+                    }
+                    .code-tag {
+                        background-color: #e9f5ff;
+                        color: #0366d6;
+                        padding: 2px 6px;
+                        border-radius: 3px;
+                        font-family: 'Courier New', monospace;
+                        font-size: 90%;
+                    }
+                    .inheritance {
+                        background-color: #f1f8ff;
+                        border: 1px solid #c8e1ff;
+                        border-radius: 6px;
+                        padding: 10px 15px;
+                        margin: 15px 0;
+                        font-size: 14px;
+                    }
+                    .section-divider {
+                        height: 1px;
+                        background-color: #e1e4e8;
+                        margin: 30px 0;
+                    }
+                    .file-metadata {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 15px;
+                        margin: 20px 0;
+                    }
+                    .file-metadata-item {
+                        background-color: #f1f8ff;
+                        border-radius: 20px;
+                        padding: 5px 15px;
+                        font-size: 14px;
+                        color: #0366d6;
+                    }
+                    .content-section {
+                        margin-bottom: 30px;
+                        background-color: white;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                        padding: 20px;
+                        border: 1px solid #e1e4e8;
+                    }
+                    .content-section h2 {
+                        margin-top: 0;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #eaecef;
+                    }
+                    .accordion-content {
+                        padding: 0;
+                    }
+                    .accordion-content.active {
+                        padding: 20px;
+                    }
+                    .method-list {
+                        list-style-type: none;
+                        padding: 0;
+                    }
+                    .method-list li {
+                        margin-bottom: 10px;
+                    }
+                    .import-list {
+                        list-style-type: none;
+                        padding: 0;
+                    }
+                    .import-list li {
+                        margin-bottom: 8px;
+                        padding: 5px 10px;
+                        background-color: #f6f8fa;
+                        border-radius: 4px;
+                        font-family: 'Courier New', monospace;
+                    }
+                    .back-button {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: #0d9488;
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 6px;
+                        font-weight: 500;
+                        margin-bottom: 20px;
+                        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                        transition: all 0.2s ease;
+                    }
+                    .back-button:hover {
+                        background-color: #0f766e;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                        transform: translateY(-2px);
+                    }
+                    header {
+                        background-color: #f0fdfa;
+                        border-radius: 8px;
+                    }
+                    .accordion {
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                        transition: all 0.3s ease;
+                    }
+                    .accordion:hover {
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="navigation">
+                        <a href="../../index.html" class="back-button">← Back to Index</a>
+                    </div>
+                    
+                    <header>
+                        <h1>app\services\doc_generator.py</h1>
+                        <div class="file-metadata">
+                            <span class="file-metadata-item">Classes: 1</span>
+                            <span class="file-metadata-item">Functions: 0</span>
+                            <span class="file-metadata-item">Imports: 12</span>
+                        </div>
+                    </header>
+                    
+                    <div class="content-section">
+                        <h2>File Purpose and Overview</h2>
+                        <div class="file-purpose">
+                            <p>This file (<code>doc_generator.py</code>) defines 1 classes. <p>Classes: <code>DocGenerator</code></p>
+                        </div>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h2>File Structure</h2>
+            <h3>Imports</h3><ul class="import-list"><li><code>import os</code></li><li><code>import time</code></li><li><code>from typing import Dict, List, Optional, Callable, Any</code></li><li><code>from datetime import datetime</code></li><li><code>import logging</code></li><li><code>import threading</code></li><li><code>import json</code></li><li><code>from app.core.schemas import ProjectConfig, ProjectDocumentation, FileDocumentation, DocumentationResult</code></li><li><code>from app.services.file_parser import FileParser</code></li><li><code>from app.services.directory_scanner import DirectoryScanner</code></li><li><code>from app.services.watcher import FileSystemWatcher</code></li><li><code>from app.core.config import settings</code></li></ul><div class="section-divider"></div><h3>Classes</h3><ul><li><strong class="code-tag">DocGenerator</strong>: The <code>DocGenerator</code> class provides functionality related to DocGenerator. It can be initialized with specific parameters. It defines 8 methods to handle various operations.</li></ul></div><div class="content-section"><h2>Classes</h2>
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <h3>DocGenerator</h3>
+                            <div class="accordion-icon"></div>
+                        </div>
+                        <div class="accordion-content">
+                    <div class="method-description">Main documentation generator service.
+Coordinates parsing files and generating documentation.</div><h4>Methods</h4><ul class="method-list"><li class="method-item"><div class="method-name">__init__</div><div class="method-signature">(config)</div><div class="method-description">Initialize the documentation generator.
+
+Args:
+    config: Project configuration</div></li><li class="method-item"><div class="method-name">save_documentation</div><div class="method-signature">(output_path)</div><div class="method-description">Save the documentation data to a JSON file.
+
+Args:
+    output_path: Directory where the JSON file should be saved.</div></li><li class="method-item"><div class="method-name">document_project</div><div class="method-signature">()</div><div class="method-description">Generate documentation for the entire project.</div></li><li class="method-item"><div class="method-name">start_watching</div><div class="method-signature">()</div><div class="method-description">Start watching the project directory for changes.</div></li><li class="method-item"><div class="method-name">stop_watching</div><div class="method-signature">()</div><div class="method-description">Stop watching the project directory.</div></li><li class="method-item"><div class="method-name">generate_output</div><div class="method-signature">(results)</div><div class="method-description">Generate documentation output files.
+
+Args:
+    results: Optional list of DocumentationResult objects. If not provided,
+            will use stored documentation.</div></li><li class="method-item"><div class="method-name">create_watcher</div><div class="method-signature">()</div><div class="method-description">Create and return a watcher for the project.
+This method is for compatibility with the API.
+
+Returns:
+    self: Returns the DocGenerator instance itself</div></li><li class="method-item"><div class="method-name">document_file</div><div class="method-signature">(file_path)</div><div class="method-description">Generate documentation for a single file.
+
+Args:
+    file_path: Path to the file to document
+    
+Returns:
+    DocumentationResult object if successful, None otherwise</div></li></ul></div></div></div>
+                </div>
+                <script src="../../script.js"></script>
+            </body>
+            </html>
+            
