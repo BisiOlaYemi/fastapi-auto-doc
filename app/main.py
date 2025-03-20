@@ -57,6 +57,12 @@ async def root():
     return {"message": "Welcome to FastAPI Auto-Documentation", 
             "docs": f"{settings.API_V1_STR}/documentation/dashboard"}
 
+@app.get("/health")
+async def health():
+    """Health check endpoint."""
+    return {"status": "ok"}
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

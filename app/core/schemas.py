@@ -125,7 +125,7 @@ class DocumentationResult(BaseModel):
     documentation_url: Optional[str] = None
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "total_files": 10,
                 "total_functions": 25,
