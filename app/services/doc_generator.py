@@ -773,7 +773,7 @@ class DocGenerator:
         
         rel_path = os.path.relpath(file_path, self.config.project_path)
         
-        # Generate file purpose and description
+
         file_purpose = self._generate_file_purpose(file_path, file_doc)
         
         with open(output_path, "w", encoding="utf-8") as f:

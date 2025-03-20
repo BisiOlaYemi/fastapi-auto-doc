@@ -136,7 +136,6 @@ class DocumentationResult(BaseModel):
         }
 
 class ErrorResponse(BaseModel):
-    """Standard error response."""
     
     detail: str
     

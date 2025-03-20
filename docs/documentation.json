@@ -226,7 +226,7 @@
                     "alias": null
                 }
             ],
-            "last_modified": "2025-03-15 00:21:33.566588"
+            "last_modified": "2025-03-17 01:14:01.101205"
         },
         "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\main.py": {
             "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\main.py",
@@ -779,7 +779,7 @@
                 },
                 "ErrorResponse": {
                     "name": "ErrorResponse",
-                    "docstring": "Standard error response.",
+                    "docstring": null,
                     "methods": {},
                     "base_classes": [
                         "BaseModel"
@@ -825,7 +825,7 @@
                     "alias": null
                 }
             ],
-            "last_modified": "2025-03-14 02:20:38.795480"
+            "last_modified": "2025-03-18 11:59:15.399413"
         },
         "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\core\\__init__.py": {
             "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\core\\__init__.py",
@@ -1064,7 +1064,7 @@
                             ],
                             "return_type": null,
                             "decorators": [],
-                            "line_number": 1262,
+                            "line_number": 1263,
                             "source_code": null,
                             "is_async": false
                         },
@@ -1077,7 +1077,7 @@
                             ],
                             "return_type": null,
                             "decorators": [],
-                            "line_number": 1272,
+                            "line_number": 1273,
                             "source_code": null,
                             "is_async": false
                         }
@@ -1173,7 +1173,7 @@
                     "alias": null
                 }
             ],
-            "last_modified": "2025-03-16 22:08:22.091724"
+            "last_modified": "2025-03-18 10:35:38.146730"
         },
         "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\file_parser.py": {
             "file_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc\\app\\services\\file_parser.py",
@@ -1384,7 +1384,7 @@
             "last_modified": "2025-03-12 16:40:08.541848"
         }
     },
-    "last_updated": "2025-03-16T22:08:36.221908",
+    "last_updated": "2025-03-18T13:07:38.245876",
     "config": {
         "project_path": "C:\\Users\\Olayemi\\Desktop\\fastapi-autodoc",
         "watch_mode": false,

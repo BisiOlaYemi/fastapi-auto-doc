@@ -398,7 +398,7 @@
           "methods": {}
         },
         "ErrorResponse": {
-          "docstring": "Standard error response.",
+          "docstring": null,
           "methods": {}
         }
       },
@@ -619,5 +619,5 @@
       "functions": {}
     }
   },
-  "last_updated": "2025-03-16T22:08:36.221908"
+  "last_updated": "2025-03-18T13:07:38.245876"
 }
