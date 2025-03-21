@@ -474,7 +474,7 @@ class DocGenerator:
                 
                 accordionHeaders.forEach(header => {
                     header.addEventListener('click', function() {
-                        // Toggle active class on parent accordion
+                        
                         const accordion = this.parentElement;
                         accordion.classList.toggle('active');
                         

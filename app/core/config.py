@@ -9,6 +9,9 @@ class Settings(BaseSettings):
     
     VERSION: str = "1.0.0"
     BACKEND_CORS_ORIGINS: List[str] = []
+
+
+    PROJECT_PATH: str = Field(default=os.getcwd(), env="PROJECT_PATH")
     
     
     API_V1_STR: str = "/api/v1"

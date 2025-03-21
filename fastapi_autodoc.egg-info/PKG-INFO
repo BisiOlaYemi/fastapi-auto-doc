@@ -1,0 +1,59 @@
+Metadata-Version: 2.4
+Name: fastapi-autodoc
+Version: 1.0.0
+Summary: A FastAPI library for generating and managing project documentation
+Home-page: https://github.com/BisiOlaYemi/fastapi-autodoc
+Author: Yemi Ogunrinde
+Author-email: ogunrinde_olayemi@yahoo.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Framework :: FastAPI
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: click
+Requires-Dist: pydantic
+Requires-Dist: jinja2
+Requires-Dist: python-dotenv
+Requires-Dist: pydantic-settings
+Requires-Dist: watchdog
+Requires-Dist: typing-extensions
+Requires-Dist: httpx
+Requires-Dist: ast-comments
+Requires-Dist: astroid
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# FastAPI AutoDoc
+
+FastAPI AutoDoc is a library designed to help developers generate and manage project documentation dynamically for Python projects. It integrates seamlessly with FastAPI and provides a web-based dashboard for managing and viewing documentation.
+
+## Features
+
+- **Dynamic Documentation**: Automatically generate documentation for Python projects.
+- **Web-Based Dashboard**: View and manage documentation through a user-friendly interface.
+- **File Watching**: Monitor project files for changes and update documentation in real-time.
+- **REST API**: Expose endpoints for interacting with the documentation service programmatically.
+- **Health Check**: Built-in health check endpoint to monitor the service.
+
+---
+
+## Installation
+
+You can install the library using pip:
+
+```bash
+pip install fastapi-autodoc

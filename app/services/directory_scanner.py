@@ -46,7 +46,7 @@ class DirectoryScanner:
             for pattern in self.excluded_files:
                 if fnmatch.fnmatch(basename, pattern):
                     return True
-            # Also check if any parent directory is excluded
+            
             current_dir = os.path.dirname(path)
             while current_dir != self.project_path:
                 if os.path.basename(current_dir) in self.excluded_dirs:
