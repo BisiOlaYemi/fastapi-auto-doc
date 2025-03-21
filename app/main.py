@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 import os
 import traceback
 import logging
@@ -51,11 +51,10 @@ async def error_handling_middleware(request: Request, call_next):
 
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
-@app.get("/")
+@app.get("/", response_class=RedirectResponse)
 async def root():
-    """Redirect to documentation dashboard."""
-    return {"message": "Welcome to FastAPI Auto-Documentation", 
-            "docs": f"{settings.API_V1_STR}/documentation/dashboard"}
+    return RedirectResponse(url=f"{settings.API_V1_STR}/documentation/dashboard")
+
 
 @app.get("/health")
 async def health():
