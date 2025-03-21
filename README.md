@@ -79,6 +79,6 @@ DEBUG=True
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests on the [GitHub repository](https://github.com/BisiOlaYemi/fastapi-autodoc).
+Contributions are welcome! Feel free to open issues or submit pull requests on the [GitHub repository](https://github.com/BisiOlaYemi/fastapi-auto-doc).
 
 ---
