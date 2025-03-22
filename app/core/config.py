@@ -9,6 +9,13 @@ class Settings(BaseSettings):
     
     VERSION: str = "1.0.0"
     BACKEND_CORS_ORIGINS: List[str] = []
+    DATABASE_TYPE: str = "mongodb"  
+    MONGO_URI: Optional[str] = None
+    DB_NAME: Optional[str] = None
+    POSTGRES_URI: Optional[str] = None  
+    UPLOAD_DIR: str = "uploads"
+    OUTPUT_DIR: str = "outputs"
+    EXCLUDED_DIRS: List[str] = []
 
 
     PROJECT_PATH: str = Field(default=os.getcwd(), env="PROJECT_PATH")
@@ -50,7 +57,9 @@ class Settings(BaseSettings):
     REQUIRE_AUTH: bool = False
 
     class Config:
-        env_file = ".env"
+        env_file = ".env",
+        env_file_encoding = "utf-8",
+        extra = "allow"
         case_sensitive = True
 
 
