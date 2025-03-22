@@ -57,8 +57,8 @@ class Settings(BaseSettings):
     REQUIRE_AUTH: bool = False
 
     class Config:
-        env_file = ".env",
-        env_file_encoding = "utf-8",
+        env_file = ".env"
+        env_file_encoding = "utf-8"
         extra = "allow"
         case_sensitive = True
 
