@@ -17,7 +17,7 @@ FastAPI AutoDoc is a library designed to help developers generate and manage pro
 You can install the library using pip:
 
 ```bash
-pip install fastapi-autodoc==1.0.0.1
+pip install fastapi-autodoc==1.0.0.7
 ```
 ---
 
