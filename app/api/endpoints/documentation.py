@@ -158,7 +158,10 @@ async def documentation_dashboard():
     """
     Return the HTML dashboard for managing documentation.
     """
-    with open("./app/templates/dashboard.html", "r") as f:
+    template_path = os.path.join(os.path.dirname(__file__), "../../templates/dashboard.html")
+    template_path = os.path.abspath(template_path)
+
+    with open(template_path, "r") as f:
         dashboard_html = f.read()
     
     return HTMLResponse(content=dashboard_html)
