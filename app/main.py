@@ -79,14 +79,19 @@ def create_app() -> FastAPI:
 
         
         return FileResponse(docs_path)
-
+    
     @app.on_event("startup")
     async def mount_docs_directory():
         project_docs_path = os.path.join(settings.PROJECT_PATH, "docs")
         if not os.path.exists(project_docs_path):
-            raise HTTPException(status_code=404, detail="Documentation directory not found")
+            logger.warning(f"Documentation directory not found at {project_docs_path}")
+            logger.warning("Run 'fastapi-autodoc generate' first to create documentation")
+            # An empty docs directory with a placeholder
+            os.makedirs(project_docs_path, exist_ok=True)
+            with open(os.path.join(project_docs_path, "index.html"), "w") as f:
+                f.write("<html><body><h1>Documentation not generated yet</h1><p>Run 'fastapi-autodoc generate' to create documentation.</p></body></html>")
+        
         app.mount("/docs", StaticFiles(directory=project_docs_path), name="docs")
-
 
     return app
 
