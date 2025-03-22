@@ -79,19 +79,48 @@ def create_app() -> FastAPI:
 
         
         return FileResponse(docs_path)
-    
+    project_docs_path = os.path.join(settings.PROJECT_PATH, "docs")
+
     @app.on_event("startup")
     async def mount_docs_directory():
-        project_docs_path = os.path.join(settings.PROJECT_PATH, "docs")
         if not os.path.exists(project_docs_path):
             logger.warning(f"Documentation directory not found at {project_docs_path}")
             logger.warning("Run 'fastapi-autodoc generate' first to create documentation")
-            # An empty docs directory with a placeholder
+            # Create an empty docs directory with a placeholder
             os.makedirs(project_docs_path, exist_ok=True)
             with open(os.path.join(project_docs_path, "index.html"), "w") as f:
-                f.write("<html><body><h1>Documentation not generated yet</h1><p>Run 'fastapi-autodoc generate' to create documentation.</p></body></html>")
-        
-        app.mount("/docs", StaticFiles(directory=project_docs_path), name="docs")
+                f.write("""<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Documentation Not Generated</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+            h1 { color: #e74c3c; }
+            .container { max-width: 800px; margin: 0 auto; }
+            .steps { background-color: #f9f9f9; padding: 20px; border-radius: 5px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Documentation Not Generated Yet</h1>
+            <p>It looks like you haven't generated documentation for this project yet.</p>
+            
+            <div class="steps">
+                <h2>How to generate documentation:</h2>
+                <ol>
+                    <li>Open a terminal in your project directory</li>
+                    <li>Run: <code>fastapi-autodoc generate</code></li>
+                    <li>Once completed, refresh this page</li>
+                </ol>
+            </div>
+            
+            <p>For more information, refer to the FastAPI AutoDoc documentation.</p>
+        </div>
+    </body>
+    </html>""")
+    
+    app.mount("/docs", StaticFiles(directory=project_docs_path), name="docs")
+
 
     return app
 

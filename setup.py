@@ -16,7 +16,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Yemi Ogunrinde",
     author_email="ogunrinde_olayemi@yahoo.com",
-    url="https://github.com/BisiOlaYemi/fastapi-autodoc",
+    url="https://github.com/BisiOlaYemi/fastapi-auto-doc",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
@@ -32,6 +32,7 @@ setup(
         "httpx",
         "ast-comments",
         "astroid",
+        "pathlib"
     ],
     entry_points={
         "console_scripts": [
