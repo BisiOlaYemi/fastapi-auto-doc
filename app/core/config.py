@@ -7,7 +7,7 @@ from pydantic import Field
 class Settings(BaseSettings):
     """Application settings with defaults."""
         
-    VERSION: str = "1.0.0"
+    VERSION: str = "1.0.2"
     BACKEND_CORS_ORIGINS: List[str] = []
     DATABASE_TYPE: str = "mongodb"  
     MONGO_URI: Optional[str] = None
