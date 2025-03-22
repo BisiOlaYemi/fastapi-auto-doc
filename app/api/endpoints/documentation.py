@@ -158,7 +158,7 @@ async def documentation_dashboard():
     """
     Return the HTML dashboard for managing documentation.
     """
-    with open("templates/dashboard.html", "r") as f:
+    with open("./app/templates/dashboard.html", "r") as f:
         dashboard_html = f.read()
     
     return HTMLResponse(content=dashboard_html)

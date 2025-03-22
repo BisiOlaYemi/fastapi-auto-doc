@@ -10,7 +10,7 @@ def read_readme():
 
 setup(
     name="fastapi-autodoc",
-    version="1.0.8",
+    version="1.0.9",
     description="A FastAPI library for generating and managing project documentation",
     long_description=read_readme(),
     long_description_content_type="text/markdown",
