@@ -79,7 +79,8 @@ def create_app() -> FastAPI:
 
         
         return FileResponse(docs_path)
-    project_docs_path = os.path.join(settings.PROJECT_PATH, "docs")
+    
+    project_docs_path = os.path.join(settings.PROJECT_PATH, settings.OUTPUT_DIR)
 
     @app.on_event("startup")
     async def mount_docs_directory():

@@ -1,9 +1,8 @@
 import uvicorn
 import click
 import os
-import sys
-from pathlib import Path
-from app.services.doc_generator import generate_documentation
+from app.services.doc_generator import DocGenerator
+from app.core.schemas import ProjectConfig
 
 @click.group()
 def cli():
@@ -27,24 +26,34 @@ def generate(output, project_path, exclude):
     # Create output directory if it doesn't exist
     output_path = os.path.join(project_path, output)
     os.makedirs(output_path, exist_ok=True)
-    
+
     click.echo(f"Generating documentation for project at {project_path}")
     click.echo(f"Documentation will be saved to {output_path}")
-    
+
     try:
-        generate_documentation(
-            project_path=project_path, 
-            output_dir=output_path,
-            excluded_dirs=list(exclude)
+        # Create a ProjectConfig instance
+        config = ProjectConfig(
+            project_path=project_path,
+            doc_output_path=output,
+            include_private=False,
+            excluded_dirs=list(exclude),
+            excluded_files=[]
         )
+
+        # Create an instance of DocGenerator
+        doc_generator = DocGenerator(config)
+
+        # Call the document_project method
+        result = doc_generator.document_project()
+
         click.echo("Documentation generated successfully!")
+        click.echo(f"Documentation saved at: {result.output_path}")
         click.echo(f"Run 'fastapi-autodoc runserver' to view the documentation")
     except Exception as e:
         click.echo(f"Error generating documentation: {str(e)}")
         click.echo("Creating a placeholder documentation page instead")
         with open(os.path.join(output_path, "index.html"), "w") as f:
             f.write(f"""<!DOCTYPE html>
-                    
         <html>
         <head>
             <title>Project Documentation</title>
